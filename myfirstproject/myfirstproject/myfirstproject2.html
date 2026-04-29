@@ -5,7 +5,7 @@
     <title>Title</title>
 </head>
 <body>
-  <form action="/myfirstproject/bonjour/" method="get">
+  <form action="{% url 'bonjour' %}" method="get">
       <label for="nom">Nom:</label>
       <input type="text" id="nom" name="nom" required>
       <button type="submit">Envoyer</button>

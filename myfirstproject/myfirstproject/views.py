@@ -1,7 +1,5 @@
 from django.shortcuts import render
 
-from myfirstproject import myfirstproject
-
 
 def index(request):
     return render(request, 'myfirstproject.html')
@@ -17,5 +15,5 @@ def page2(request):
 
 
 def bonjour(request):
-    nom = request.GET["nom"]
-    return render(request, "myfirstproject/bonjour.html" , {"nom": nom})
+    nom = request.GET.get('nom', '')
+    return render(request, 'bonjour.html', {'nom': nom})
